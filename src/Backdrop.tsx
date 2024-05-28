@@ -77,7 +77,7 @@ const Backdrop: React.FC<BackdropProps> = ({
     Animated.timing(animated, {
       toValue: revealed ? 1 : 0,
       duration: 300,
-      useNativeDriver,
+      useNativeDriver: !!useNativeDriver,
     }).start();
   }, [revealed]);
 

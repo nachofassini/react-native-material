@@ -12,7 +12,7 @@ export const useAnimatedElevation = (elevation: Elevation, useNativeDriver: bool
     Animated.timing(animated, {
       toValue: elevation,
       duration: 200,
-      useNativeDriver,
+      useNativeDriver: !!useNativeDriver,
     }).start();
   }, [elevation]);
 

@@ -179,7 +179,7 @@ const TextInput: React.FC<TextInputProps> = React.forwardRef(
         toValue: focused ? 1 : 0,
         duration: 200,
         easing: Easing.out(Easing.ease),
-        useNativeDriver,
+        useNativeDriver: !!useNativeDriver,
       }).start();
     }, [focused]);
 
@@ -192,7 +192,7 @@ const TextInput: React.FC<TextInputProps> = React.forwardRef(
         toValue: active ? 1 : 0,
         duration: 200,
         easing: Easing.out(Easing.ease),
-        useNativeDriver,
+        useNativeDriver: !!useNativeDriver,
       }).start();
     }, [active]);
 

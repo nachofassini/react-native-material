@@ -325,7 +325,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const animatedElevation = useAnimatedElevation(
     variant === 'contained' && !disableElevation && !disabled ? (pressed ? 8 : hovered ? 4 : 2) : 0,
-    useNativeDriver,
+    useNativeDriver
   );
 
   return (

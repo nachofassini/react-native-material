@@ -143,7 +143,7 @@ const FAB: React.FC<FABProps> = ({
     Animated.timing(animated, {
       toValue: visible ? 1 : 0,
       duration: 200,
-      useNativeDriver,
+      useNativeDriver: !!useNativeDriver,
     }).start();
   }, [visible]);
 

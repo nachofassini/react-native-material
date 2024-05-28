@@ -89,7 +89,7 @@ const Pressable: React.FC<PressableProps> = ({
           ),
           easing: Easing.out(Easing.ease),
           duration: 400,
-          useNativeDriver,
+          useNativeDriver: !!useNativeDriver,
         }).start();
       }
     },
@@ -106,7 +106,7 @@ const Pressable: React.FC<PressableProps> = ({
           toValue: 0,
           easing: Easing.out(Easing.ease),
           duration: 400,
-          useNativeDriver,
+          useNativeDriver: !!useNativeDriver,
         }).start(() => {
           setRipples((prevState) => prevState.slice(1));
         });
